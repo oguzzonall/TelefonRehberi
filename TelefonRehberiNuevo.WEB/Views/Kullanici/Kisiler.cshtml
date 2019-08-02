@@ -1,0 +1,46 @@
+﻿@model List<TelefonRehberiNuevo.DTO.EEntity.EKisilerDTO>
+
+
+@{
+
+    ViewBag.Title = "Kisiler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Kisiler</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Adı")
+        </th>
+        <th>
+            @Html.DisplayName("Soyadı")
+        </th>
+        <th>
+            @Html.DisplayName("Telefon")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Adi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.ActionLink("Kullanıcı Detay", "Details", new { id = item.KisiId })
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.CORE", "TelefonRehberiNuevo.CORE\TelefonRehberiNuevo.CORE.csproj", "{0C3D4BEA-20B8-48E3-9E9C-600FEDAB1500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.DATA", "TelefonRehberiNuevo.DATA\TelefonRehberiNuevo.DATA.csproj", "{C15EC7E8-4682-4618-BC45-EA53A0B04ADA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.UTILITIES", "TelefonRehberiNuevo.UTILITIES\TelefonRehberiNuevo.UTILITIES.csproj", "{D9C8089F-70EC-4C6E-A6B9-A13733135D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.SERVICES", "TelefonRehberiNuevo.SERVICES\TelefonRehberiNuevo.SERVICES.csproj", "{C8487B2F-C7CE-4A42-984C-6998939B5435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{5E168375-18A0-4E0A-A415-DEC8DC5E0B09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{D5E5D55B-EC49-46D7-AB82-29394B09D34A}"
+	ProjectSection(SolutionItems) = preProject
+		TelefonRehberiNuevo.SERVICES\packages.config = TelefonRehberiNuevo.SERVICES\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{93784593-BB6B-46D0-83EC-E17FA963F5CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.API", "TelefonRehberiNuevo.API\TelefonRehberiNuevo.API.csproj", "{837A97B8-3638-42A4-B25F-CB8B3C1EAA9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.IoC", "TelefonRehberiNuevo.IoC\TelefonRehberiNuevo.IoC.csproj", "{599720E7-FD48-4CB2-958F-E8C7132A2B6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.DTO", "TelefonRehberiNuevo.DTO\TelefonRehberiNuevo.DTO.csproj", "{8B5FB04E-E2BB-4165-AC96-0C5C88B6D3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberiNuevo.WEB", "TelefonRehberiNuevo.WEB\TelefonRehberiNuevo.WEB.csproj", "{0B18C6AE-A346-4343-8F7E-072EBD9D648E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C3D4BEA-20B8-48E3-9E9C-600FEDAB1500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C3D4BEA-20B8-48E3-9E9C-600FEDAB1500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C3D4BEA-20B8-48E3-9E9C-600FEDAB1500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C3D4BEA-20B8-48E3-9E9C-600FEDAB1500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15EC7E8-4682-4618-BC45-EA53A0B04ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15EC7E8-4682-4618-BC45-EA53A0B04ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15EC7E8-4682-4618-BC45-EA53A0B04ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15EC7E8-4682-4618-BC45-EA53A0B04ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C8089F-70EC-4C6E-A6B9-A13733135D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C8089F-70EC-4C6E-A6B9-A13733135D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C8089F-70EC-4C6E-A6B9-A13733135D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C8089F-70EC-4C6E-A6B9-A13733135D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8487B2F-C7CE-4A42-984C-6998939B5435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8487B2F-C7CE-4A42-984C-6998939B5435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8487B2F-C7CE-4A42-984C-6998939B5435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8487B2F-C7CE-4A42-984C-6998939B5435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837A97B8-3638-42A4-B25F-CB8B3C1EAA9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837A97B8-3638-42A4-B25F-CB8B3C1EAA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837A97B8-3638-42A4-B25F-CB8B3C1EAA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837A97B8-3638-42A4-B25F-CB8B3C1EAA9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599720E7-FD48-4CB2-958F-E8C7132A2B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599720E7-FD48-4CB2-958F-E8C7132A2B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599720E7-FD48-4CB2-958F-E8C7132A2B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599720E7-FD48-4CB2-958F-E8C7132A2B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B5FB04E-E2BB-4165-AC96-0C5C88B6D3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B5FB04E-E2BB-4165-AC96-0C5C88B6D3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B5FB04E-E2BB-4165-AC96-0C5C88B6D3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B5FB04E-E2BB-4165-AC96-0C5C88B6D3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B18C6AE-A346-4343-8F7E-072EBD9D648E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B18C6AE-A346-4343-8F7E-072EBD9D648E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B18C6AE-A346-4343-8F7E-072EBD9D648E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B18C6AE-A346-4343-8F7E-072EBD9D648E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C3D4BEA-20B8-48E3-9E9C-600FEDAB1500} = {5E168375-18A0-4E0A-A415-DEC8DC5E0B09}
+		{C15EC7E8-4682-4618-BC45-EA53A0B04ADA} = {5E168375-18A0-4E0A-A415-DEC8DC5E0B09}
+		{D9C8089F-70EC-4C6E-A6B9-A13733135D0E} = {D5E5D55B-EC49-46D7-AB82-29394B09D34A}
+		{C8487B2F-C7CE-4A42-984C-6998939B5435} = {5E168375-18A0-4E0A-A415-DEC8DC5E0B09}
+		{837A97B8-3638-42A4-B25F-CB8B3C1EAA9C} = {93784593-BB6B-46D0-83EC-E17FA963F5CD}
+		{599720E7-FD48-4CB2-958F-E8C7132A2B6A} = {5E168375-18A0-4E0A-A415-DEC8DC5E0B09}
+		{8B5FB04E-E2BB-4165-AC96-0C5C88B6D3B6} = {5E168375-18A0-4E0A-A415-DEC8DC5E0B09}
+		{0B18C6AE-A346-4343-8F7E-072EBD9D648E} = {93784593-BB6B-46D0-83EC-E17FA963F5CD}
+	EndGlobalSection
+EndGlobal

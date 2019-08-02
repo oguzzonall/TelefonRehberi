@@ -1,0 +1,74 @@
+﻿@model IEnumerable<TelefonRehberiNuevo.DTO.EEntity.EDepartmanDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Departman</h2>
+
+<p class="offset-1">
+    @Html.ActionLink("Departman Ekle", "Create","Departman", new {@class="btn btn-success"})
+</p>
+<div class="offset-2">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmanAdi)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmanAdi)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.DepartmanId })  |
+                    <a href="#" id="deleteLink" onclick="DeleteClick(@item.DepartmanId);">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
+@section scripts
+{
+    <script>
+        function DeleteClick(departmanId) {
+            var html = '<div class="offset-2">' +
+                '  <a href="javascript:funcDepartmanDelete(' + departmanId + ');" style="background: #f0ffff" class="btn btn-red btn-circle active">     ' +
+                '  <i class="fa fa-check"></i>Evet                                               ' +
+                '  </a>                                                                            '+
+                '  <a href="javascript:funcToastrRemove();" style="background: #f0ffff" class="btn btn-red btn-circle active">   ' +
+                '  <i class="fa fa-times"></i>İptal                                                 ' +
+                '  </a>                                                                            ' +
+                '</div>';
+            toastr.info("Bilgilendirme", "Bu Kaydı silmek istediğinizden emin misiniz?<br/>" + html);
+            
+        }
+
+        function funcDepartmanDelete(id) {
+            $.ajax({
+                type: "POST",
+                url: "/Departman/Delete",
+                data: { id: id }
+            }).done(function (e) {
+                if (e.sonuc === true) {
+                    toastr.success(e.mesaj, "Tebrikler");
+                    setTimeout(function () { window.location = "/Departman/Index"; },
+                        2000);
+                } else {
+                    toastr.warning(e.mesaj,"Başarısız");
+                }
+            }).fail(function () {
+                toastr.error("Sunucu ile bağlantı kesildi","Hata");
+            });
+        }
+
+        function funcToastrRemove() {
+            toastr.remove();
+        }
+    </script>
+}

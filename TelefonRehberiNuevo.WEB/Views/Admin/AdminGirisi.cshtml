@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Telefon Rehberi - Admin Şifre Değiştir</title>
+    <link rel="stylesheet" href="/Content/Admin/css/screen.css" type="text/css" media="screen" title="default" />
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+    <!--  jquery core -->
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <!-- Custom jquery scripts -->
+    <script src="/Content/Admin/js/jquery/custom_jquery.js" type="text/javascript"></script>
+
+    <script src="/Content/Admin/js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).pngFix();
+        });
+    </script>
+    <script src="~/Scripts/toastr.min.js"></script>
+</head>
+<body id="login-bg">
+
+    <!-- Start: login-holder -->
+    <div id="login-holder">
+
+        <!-- start logo -->
+        <div id="logo-login">
+            <a href="/Content/Admin/index.html"><img src="/Content/Admin/images/shared/logo.png" width="156" height="40" alt="" /></a>
+        </div>
+        <!-- end logo -->
+
+        <div class="clear"></div>
+
+        <!--  start loginbox ................................................................................. -->
+        <div id="loginbox">
+
+            <!--  start login-inner -->
+            <div id="login-inner">
+
+
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th>Admin Adi</th>
+                        <td><input name="Adi" id="inputUserName" type="text" class="login-inp" /></td>
+                    </tr>
+                    <tr>
+                        <th>Şifresi</th>
+                        <td><input name="Sifre" id="inputPassword" type="password" onfocus="this.value=''" class="login-inp" /></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><input type="submit" onclick="LoginControl()" class="submit-login" /></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "4000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+    $("body").on("keydown",
+        function (e) {
+            if (e.keyCode === 13) {
+                LoginControl();
+            }
+        });
+
+    function LoginControl() {
+        var username = $("#inputUserName").val();
+        var password = $("#inputPassword").val();
+        if (username.trim() !== "" && password.trim() !== "") {
+            $.ajax({
+                method: "POST",
+                url: "/Admin/AdminGirisi",
+                data: { Username: username, Password: password }
+            }).done(function (e) {
+                if (e.sonuc === true) {
+                    toastr.success(e.mesaj, "İşlem Başarılı");
+                    setTimeout(function () { window.location = e.islem; },
+                        5000);
+                } else {
+                    toastr.error("Hatalı Giriş</Br>" + e.mesaj, "error");
+                }
+            }).fail(function () {
+                alert("Sunucu ile bağlantı kurulamadı.");
+            });
+        } else {
+            toastr.warning("Boş Geçilemez.</Br>Lütfen gerekli alanları doldurun.", "warning");
+        }
+
+    }
+
+</script>
+
